@@ -21,6 +21,10 @@ public class MeshGen : MonoBehaviour {
 
 	public void GenerateMesh(int[,] map, float squareSize)
 	{
+		if(wallCollider == null) 
+		{
+			wallCollider = walls.gameObject.AddComponent<MeshCollider> ();
+		}
 		outlines.Clear();
 		checkedVertices.Clear ();
 		triangleDictionary.Clear();

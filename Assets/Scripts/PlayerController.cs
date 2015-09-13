@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 	{
 
 		Vector3 mov2 = mov * Time.fixedDeltaTime;
-		rb.MovePosition (rb.position + move);
+		rb.MovePosition (rb.position + mov2);
 	}
 	void OnTriggerEnter(Collider other)
 	{
